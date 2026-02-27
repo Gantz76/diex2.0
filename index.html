@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIEX | Création de Sites Web Ultra-Modernes</title>
+    <meta name="description"
+        content="Propulsez votre entreprise avec un site internet premium, conçu pour la conversion et l'impact visuel.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon / Logo -->
+    <link rel="icon" type="image/svg+xml"
+        href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/></svg>'>
+</head>
+
+<body>
+
+    <!-- Global Noise Overlay -->
+    <svg style="display: none;">
+        <filter id="noiseFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+        </filter>
+    </svg>
+    <div class="noise-overlay"
+        style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');">
+    </div>
+
+    <!-- Intro Flash -->
+    <div class="intro-screen" id="intro">
+        <div class="intro-rings">
+            <div class="intro-ring r1"></div>
+            <div class="intro-ring r2"></div>
+            <div class="intro-ring r3"></div>
+        </div>
+        <div style="position: relative; z-index: 2; text-align: center;">
+            <h1 class="intro-logo">DIEX</h1>
+        </div>
+        <div class="intro-glow"></div>
+        <div class="intro-flash"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo" style="display: flex; align-items: center; gap: 8px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z" />
+                </svg>
+                DIEX
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#resultats">Résultats</a>
+                <a href="#offres">Offres</a>
+                <a href="#exemples">Exemples</a>
+            </div>
+            <a href="mailto:diex.agence@gmail.com" class="btn btn-sm btn-nav glow-btn">Réserver un appel</a>
+        </div>
+    </nav>
+
+    <!-- Floating Buttons -->
+    <a href="mailto:diex.agence@gmail.com" class="floating-btn float-whatsapp" aria-label="Email">
+        <i class="ph-fill ph-envelope-simple"></i>
+        <div class="float-ping"></div>
+    </a>
+
+    <!-- Main Content -->
+    <main>
+        <!-- 1. HERO WITH VIDEO -->
+        <section class="hero" id="hero">
+            <div class="hero-video-wrapper">
+                <video autoplay loop muted playsinline class="hero-video"
+                    poster="https://img.freepik.com/free-video/abstract-blue-particles-background_1110-3882.jpg?t=st=1690000000~exp=1690000000~hmac=x">
+                    <!-- Tech elegant lines video from Pixabay CDN -->
+                    <source src="https://cdn.pixabay.com/video/2023/10/22/186115-877233261_large.mp4" type="video/mp4">
+                    <source src="https://cdn.pixabay.com/video/2021/08/11/84705-587841165_large.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="container hero-content">
+                <div class="hero-badge reveal-up">
+                    <i class="ph-bold ph-lightning"></i> Réponse sous 24h
+                </div>
+                <h1 class="hero-title reveal-up delay-1">
+                    Faites décoller<br>
+                    <span class="text-gradient gradient-flash drama-text">Votre activité locale.</span>
+                </h1>
+                <p class="hero-subtitle reveal-up delay-2">
+                    Des sites internet professionnels conçus pour attirer de nouveaux clients et valoriser votre
+                    savoir-faire, sans effort technique de votre part.
+                </p>
+                <div class="hero-ctas reveal-up delay-3">
+                    <a href="#offres" class="btn btn-primary btn-lg glow-btn">
+                        Voir les offres <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                    <a href="mailto:diex.agence@gmail.com" class="btn btn-glass btn-lg">
+                        <i class="ph-bold ph-envelope-simple"></i> Demander un devis
+                    </a>
+                </div>
+            </div>
+
+            <!-- Wave Separator -->
+            <div class="section-separator wave-bottom">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,0 C320,100 420,120 720,120 C1020,120 1120,100 1440,0 L1440,120 L0,120 Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- 2. SERVICES WITH MOCKUPS -->
+        <section class="services section-padding bg-white" id="services">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Notre méthode</h2>
+                    <p class="section-desc">Un site qui rassure + une visibilité locale + des demandes qui arrivent,
+                        sans prise de tête.</p>
+                </div>
+                <div class="services-grid">
+
+                    <!-- Carte 1 -->
+                    <div class="service-card tilt-card reveal-up">
+                        <div class="service-mockup"
+                            style="background: #eff6ff; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; width: 300px; height: 300px; background: var(--primary); opacity: 0.05; border-radius: 50%; top: -100px; right: -50px;">
+                            </div>
+                            <div
+                                style="background: white; padding: 16px 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(29, 78, 216, 0.15); display: flex; align-items: center; gap: 12px; transform: scale(1.1); z-index: 2;">
+                                <div
+                                    style="background: #10b981; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i class="ph-bold ph-envelope-open" style="font-size: 1.2rem;"></i>
+                                </div>
+                                <div style="text-align: left;">
+                                    <div
+                                        style="font-weight: 700; color: var(--text-dark); font-size: 0.95rem; margin-bottom: 2px;">
+                                        Nouvelle demande de devis</div>
+                                    <div style="color: var(--text-muted); font-size: 0.85rem;">Projet : Rénovation
+                                        complète</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="ph-duotone ph-layout"></i></div>
+                            <h3>Site clair et moderne</h3>
+                            <p>Un site rapide, beau et pensé pour convaincre. Adapté mobile, prêt à présenter vos
+                                services.</p>
+                        </div>
+                    </div>
+
+                    <!-- Carte 2 -->
+                    <div class="service-card tilt-card reveal-up delay-1">
+                        <div class="service-mockup"
+                            style="background: #f8fafc; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; width: 250px; height: 250px; background: #f59e0b; opacity: 0.05; border-radius: 50%; bottom: -50px; left: -50px;">
+                            </div>
+                            <div
+                                style="background: white; padding: 16px 24px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transform: scale(1.1); z-index: 2; text-align: left;">
+                                <div
+                                    style="color: #fbbf24; display: flex; gap: 4px; font-size: 1.2rem; margin-bottom: 8px;">
+                                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                        class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                        class="ph-fill ph-star"></i>
+                                </div>
+                                <div
+                                    style="font-weight: 700; color: var(--text-dark); font-size: 0.95rem; margin-bottom: 2px;">
+                                    Avis client reçu</div>
+                                <div style="color: var(--text-muted); font-size: 0.85rem;">"Travail impeccable et rapide
+                                    !"</div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="ph-duotone ph-map-pin-line"></i></div>
+                            <h3>Visibilité sur Google (local)</h3>
+                            <p>On optimise votre présence pour remonter dans votre ville et gagner des demandes de
+                                devis.</p>
+                        </div>
+                    </div>
+
+                    <!-- Carte 3 -->
+                    <div class="service-card tilt-card reveal-up delay-2">
+                        <div class="service-mockup"
+                            style="background: #eef2ff; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; width: 100%; height: 100px; background: linear-gradient(transparent, rgba(29, 78, 216, 0.05)); bottom: 0; left: 0;">
+                            </div>
+                            <div
+                                style="background: white; padding: 16px 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(29, 78, 216, 0.1); display: flex; align-items: center; gap: 12px; transform: scale(1.1); z-index: 2;">
+                                <div
+                                    style="background: var(--primary); color: white; width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="ph-bold ph-calendar-check" style="font-size: 1.2rem;"></i>
+                                </div>
+                                <div style="text-align: left;">
+                                    <div
+                                        style="font-weight: 700; color: var(--text-dark); font-size: 0.95rem; margin-bottom: 2px;">
+                                        RDV Confirmé</div>
+                                    <div style="color: var(--text-muted); font-size: 0.85rem;">Mardi prochain à 14h00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon"><i class="ph-duotone ph-robot"></i></div>
+                            <h3>Demandes automatiques</h3>
+                            <p>Formulaire, prise de rendez-vous et réponses automatiques : vos prospects sont guidés
+                                sans effort.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2.5 PHILOSOPHY (Manifesto) -->
+        <section class="philosophy" id="philosophie">
+            <div class="philosophy-bg">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
+                    alt="Abstract dark waves" class="philosophy-img">
+                <div class="philosophy-overlay"></div>
+            </div>
+            <div class="container relative z-10 text-center">
+                <p class="philosophy-statement neutral philosophy-reveal">La vitrine de votre savoir-faire mérite un
+                    écrin à sa hauteur.</p>
+                <p class="philosophy-statement massive philosophy-reveal mt-4">Nous allions <span
+                        class="text-gradient drama-text">design premium et résultats concrets.</span></p>
+            </div>
+        </section>
+
+        <!-- 2.7 PROTOCOL (Sticky Stacking Archive) -->
+        <section class="protocol bg-white" id="methode">
+            <div class="protocol-container">
+                <!-- Card 1 -->
+                <div class="protocol-card stacking-card">
+                    <div class="card-inner">
+                        <div class="p-num">01</div>
+                        <div class="p-content">
+                            <h3>Architecture & Design</h3>
+                            <p>Nous concevons la structure psychologique et visuelle de votre écosystème pour captiver
+                                instantanément votre audience cible.</p>
+                        </div>
+                        <div class="p-visual">
+                            <!-- SVG Geometric Motif -->
+                            <svg class="p-svg rotating-motif" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="var(--primary)" stroke-width="2"
+                                    stroke-dasharray="10 5" />
+                                <circle cx="50" cy="50" r="25" fill="none" stroke="var(--primary-light)"
+                                    stroke-width="1" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="protocol-card stacking-card">
+                    <div class="card-inner">
+                        <div class="p-num">02</div>
+                        <div class="p-content">
+                            <h3>Ingénierie & SEO</h3>
+                            <p>Développement ultra-rapide et optimisation chirurgicale pour dominer les résultats de
+                                recherche Google sur votre secteur.</p>
+                        </div>
+                        <div class="p-visual">
+                            <!-- SVG Scanning Laser -->
+                            <svg class="p-svg" viewBox="0 0 100 100">
+                                <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                                    <circle cx="2" cy="2" r="1.5" fill="rgba(29, 78, 216, 0.2)" />
+                                </pattern>
+                                <rect width="100" height="100" fill="url(#dots)" />
+                                <line x1="0" y1="50" x2="100" y2="50" stroke="var(--primary)" stroke-width="3"
+                                    class="scanning-laser" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="protocol-card stacking-card">
+                    <div class="card-inner">
+                        <div class="p-num">03</div>
+                        <div class="p-content">
+                            <h3>Automatisation & Scalabilité</h3>
+                            <p>Intégration de workflows invisibles (CRM, devis, RDV) pour transformer votre trafic en
+                                clients payants, 24/7 en pilote automatique.</p>
+                        </div>
+                        <div class="p-visual">
+                            <!-- SVG Waveform -->
+                            <svg class="p-svg pulsing-waveform" viewBox="0 0 100 100">
+                                <path d="M0,50 L20,50 L30,20 L40,80 L50,50 L100,50" fill="none" stroke="var(--primary)"
+                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. RÉSULTATS (KPI STATS) -->
+        <section class="results section-padding bg-dark gradient-border-top" id="resultats">
+            <div class="results-bg-glow"></div>
+            <div class="container relative z-10">
+                <div class="section-header text-white text-center reveal-up">
+                    <h2 class="section-title text-white">L'Impact par les Chiffres</h2>
+                    <p class="section-desc text-gray-light">Nous ne concevons pas de simples pages, nous construisons
+                        des actifs numériques à haut rendement.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card reveal-up">
+                        <div class="stat-icon"><i class="ph-duotone ph-trend-up"></i></div>
+                        <div class="stat-val"><span class="counter" data-target="300">0</span>%</div>
+                        <p class="stat-label">De visibilité organique en plus sur la 1ère année</p>
+                    </div>
+                    <div class="stat-card reveal-up delay-1">
+                        <div class="stat-icon"><i class="ph-duotone ph-cursor-click"></i></div>
+                        <div class="stat-val"><span class="counter" data-target="80">0</span>%</div>
+                        <p class="stat-label">D'augmentation du taux de conversion (leads)</p>
+                    </div>
+                    <div class="stat-card reveal-up delay-2">
+                        <div class="stat-icon"><i class="ph-duotone ph-timer"></i></div>
+                        <div class="stat-val"><span class="counter" data-target="24">0</span>h</div>
+                        <p class="stat-label">De temps administratif économisé par mois</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Wave Separator to White -->
+            <div class="section-separator wave-bottom-dark">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,0 C320,100 420,120 720,120 C1020,120 1120,100 1440,0 L1440,120 L0,120 Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- 4. OFFRES (PRICING PREMIUM) -->
+        <section class="pricing section-padding bg-white" id="offres">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Investissement</h2>
+                    <p class="section-desc">Choisissez le propulseur de votre croissance. Qualité premium garantie sur
+                        tous nos plans.</p>
+
+                    <!-- Toggle Mensuel / One-shot -->
+                    <div class="pricing-toggle-wrap mt-8">
+                        <span class="toggle-label active" id="label-monthly">Abonnement (Tout inclus)</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="pricing-toggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="toggle-label" id="label-oneshot">Paiement unique</span>
+                    </div>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Essentiel -->
+                    <div class="pricing-card tilt-card-light reveal-up">
+                        <div class="p-header">
+                            <div class="p-icon"><i class="ph-duotone ph-paper-plane-tilt"></i></div>
+                            <h3>Essentiel</h3>
+                            <p class="p-target">Pour lancer votre activité</p>
+                        </div>
+                        <div class="p-amount">
+                            <div class="price">
+                                <h3>990€</h3><span>/projet</span>
+                            </div>
+                        </div>
+                        <div class="p-features">
+                            <ul>
+                                <li>
+                                    <i class="ph-bold ph-browser"></i>
+                                    <div class="f-text">
+                                        <strong>Site vitrine (3-5 pages)</strong>
+                                        <span>Design responsive ultra-moderne</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="ph-bold ph-envelope-simple"></i>
+                                    <div class="f-text">
+                                        <strong>Formulaire qualifié</strong>
+                                        <span>Anti-spam & notifications en temps réel</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="ph-bold ph-magnifying-glass"></i>
+                                    <div class="f-text">
+                                        <strong>Fondations SEO</strong>
+                                        <span>Balises optimisées & indexation Google</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="ph-bold ph-shield-check"></i>
+                                    <div class="f-text">
+                                        <strong>Sécurité & Hébergement</strong>
+                                        <span>SSL inclus, serveurs européens rapides</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-action">
+                            <a href="https://buy.stripe.com/test_dRmaEYehlbrX8SNgz9eUU00"
+                                class="btn btn-outline btn-full payment-btn" id="btn-essentiel">Payer maintenant</a>
+                            <a href="mailto:diex.agence@gmail.com" class="btn btn-ghost btn-full mt-2">Nous
+                                contacter</a>
+                        </div>
+                    </div>
+
+                    <!-- Pro (Highlight) -->
+                    <div class="pricing-card highlight tilt-card-light reveal-up delay-1">
+                        <div class="popular-badge"><i class="ph-fill ph-star"></i> Le plus choisi</div>
+                        <div class="highlight-glow"></div>
+                        <div class="p-header">
+                            <div class="p-icon"><i class="ph-duotone ph-rocket"></i></div>
+                            <h3>Pro</h3>
+                            <p class="p-target">Domination de votre secteur</p>
+                        </div>
+                        <div class="p-amount pricing-amount-update">
+                            <div class="price price-monthly">
+                                <h3>349€</h3><span>/mois</span>
+                            </div>
+                            <div class="price price-oneshot d-none">
+                                <h3>2 490€</h3><span>/projet</span>
+                            </div>
+                        </div>
+                        <div class="p-features">
+                            <ul>
+                                <li>
+                                    <i class="ph-bold ph-stack"></i>
+                                    <div class="f-text">
+                                        <strong>Site expert (5-10 pages)</strong>
+                                        <span>Structure pensée pour la conversion absolue</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="ph-bold ph-map-pin-line"></i>
+                                    <div class="f-text">
+                                        <strong>SEO Local Avancé</strong>
+                                        <span>Stratégie sur votre secteur géographique</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="ph-bold ph-star-half"></i>
+                                    <div class="f-text">
+                                        <strong>Module d'Avis Clients</strong>
+                                        <span>Récolte automatisée de Google Reviews</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="ph-bold ph-speedometer"></i>
+                                    <div class="f-text">
+                                        <strong>Performance Extreme</strong>
+                                        <span>Temps de chargement &lt; 1sec garanti</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-deposit d-none"></div>
+                        <div class="p-action">
+                            <a href="https://buy.stripe.com/test_aFa28sddh8fLglfer1eUU01"
+                                class="btn btn-primary glow-btn btn-full payment-btn" id="btn-pro">Payer maintenant</a>
+                            <a href="mailto:diex.agence@gmail.com" class="btn btn-ghost btn-full mt-2">Nous
+                                contacter</a>
+                        </div>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="pricing-card tilt-card-light reveal-up delay-2">
+                        <div class="p-header">
+                            <div class="p-icon"><i class="ph-duotone ph-crown"></i></div>
+                            <h3>Premium</h3>
+                            <p class="p-target">Expérience digitale sur-mesure</p>
+                        </div>
+                        <div class="p-amount" style="padding-bottom: 16px;">
+                            <div class="price" style="margin-bottom: 8px;">
+                                <h3>4 490€</h3><span> initial</span>
+                            </div>
+                            <div class="price">
+                                <h3 style="font-size: 2rem;">+ 499€</h3><span>/mois</span>
+                            </div>
+                        </div>
+                        <div class="p-features">
+                            <ul>
+                                <li>
+                                    <i class="ph-bold ph-diamonds-four"></i>
+                                    <div class="f-text">
+                                        <strong>Design Exclusif (UI/UX)</strong>
+                                        <span>Expérience animée, micro-interactions 3D</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="ph-bold ph-chart-line-up"></i>
+                                    <div class="f-text">
+                                        <strong>Automatisations complexes</strong>
+                                        <span>Sync CRM, Stripe, Calendly, Zapier...</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="ph-bold ph-shopping-bag"></i>
+                                    <div class="f-text">
+                                        <strong>E-Commerce / Réservation</strong>
+                                        <span>Vente en ligne fluide intégrée</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="ph-bold ph-headset"></i>
+                                    <div class="f-text">
+                                        <strong>Support VIP Prioritaire</strong>
+                                        <span>Ligne directe avec le développeur</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-deposit d-none"></div>
+                        <div class="p-action">
+                            <a href="https://buy.stripe.com/test_6oU4gAc9d7bH7OJ1EfeUU03"
+                                class="btn btn-outline btn-full payment-btn" id="btn-premium">Payer maintenant</a>
+                            <a href="mailto:diex.agence@gmail.com" class="btn btn-ghost btn-full mt-2">Nous
+                                contacter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. EXEMPLES (RÉALISTES & VIVANTS) -->
+        <section class="portfolio section-padding bg-blue-ultra-light" id="exemples">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Inspirations Visuelles</h2>
+                    <p class="section-desc">Des interfaces époustouflantes, pré-calibrées pour différents secteurs
+                        d'activité de pointes.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-card reveal-up">
+                        <div class="p-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=800&auto=format&fit=crop"
+                                alt="Corporate Dashboard">
+                        </div>
+                        <div class="p-info">
+                            <h4>Corporate & B2B</h4>
+                            <p>Interface sérieuse, confiance absolue, lead generation.</p>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="portfolio-card reveal-up">
+                        <div class="p-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop"
+                                alt="Immobilier Premium">
+                        </div>
+                        <div class="p-info">
+                            <h4>Immobilier Prestige</h4>
+                            <p>Mise en valeur cinématique des biens et catalogues.</p>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="portfolio-card reveal-up">
+                        <div class="p-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=800&auto=format&fit=crop"
+                                alt="Application Web SaaS">
+                        </div>
+                        <div class="p-info">
+                            <h4>Application SaaS</h4>
+                            <p>Composants technologiques, dark/light mode vibrant.</p>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="portfolio-card reveal-up">
+                        <div class="p-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop"
+                                alt="Artisan">
+                        </div>
+                        <div class="p-info">
+                            <h4>Artisan Engagé</h4>
+                            <p>Confiance au premier regard, devis en 1 clic.</p>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="portfolio-card reveal-up">
+                        <div class="p-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=800&auto=format&fit=crop"
+                                alt="Fitness Coach">
+                        </div>
+                        <div class="p-info">
+                            <h4>Coaching & Fitness</h4>
+                            <p>Énergie débordante, module de réservation live.</p>
+                        </div>
+                    </div>
+                    <!-- Project 6 -->
+                    <div class="portfolio-card reveal-up">
+                        <div class="p-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop"
+                                alt="Institut Beauty">
+                        </div>
+                        <div class="p-info">
+                            <h4>Beauté & Spa</h4>
+                            <p>Douceur, élégance et raffinement pour attirer l'élite.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 6. CTA FINAL -->
+        <section class="cta-final section-padding bg-white" id="rdv" style="border-top: 1px solid var(--border-light);">
+            <div class="container">
+                <div class="cta-box tilt-card-light reveal-up">
+                    <div class="cta-glow"></div>
+                    <h2>Donnez à votre entreprise la vitrine qu'elle mérite.</h2>
+                    <p>Démarquez-vous localement avec un outil pensé pour vos clients. Échangeons sur votre projet.</p>
+                    <a href="mailto:diex.agence@gmail.com" class="btn btn-primary glow-btn btn-xl shadow-glow mt-4">
+                        <i class="ph-bold ph-envelope-simple"></i> diex.agence@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="cinematic-footer">
+        <div class="container">
+            <div class="footer-grid pv-4">
+                <div class="footer-brand">
+                    <p class="font-bold text-white flex items-center gap-2 mb-2">
+                        <i class="ph-fill ph-crown text-gradient"></i> DIEX
+                    </p>
+                    <p class="text-muted text-sm" style="margin-bottom: 8px;">L'Excellence Digitale Pour Votre Marque.
+                    </p>
+                    <a href="mailto:diex.agence@gmail.com" class="text-muted text-sm hover:text-white"
+                        style="display: flex; align-items: center; gap: 4px; text-decoration: none; transition: color 0.3s;"><i
+                            class="ph-fill ph-envelope-simple"></i> diex.agence@gmail.com</a>
+                </div>
+
+                <div class="footer-status mt-4">
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span class="status-text">SYSTEM OPERATIONAL</span>
+                    </div>
+                </div>
+
+                <div class="footer-links mt-8 border-t border-dark pt-4 flex-between">
+                    <p class="text-muted">&copy; 2026 DIEX. Créateur d'expériences uniques.</p>
+                    <div class="legal-links">
+                        <a href="#">Conditions Générales</a>
+                        <a href="#">Confidentialité</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Vanilla Tilt for 3D effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <!-- Custom App Logic -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
