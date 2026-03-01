@@ -312,20 +312,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scroll offset for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            if (this.getAttribute('href') === '#') return;
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
+            const href = this.getAttribute('href');
+            if (href === '#' || !href.startsWith('#')) return;
+
+            const targetId = href.substring(1);
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                if (modal && modal.classList.contains('active')) {
-                    closeModal();
+                e.preventDefault();
+
+                // Close any open modals if they exist
+                const qModal = document.getElementById('q-modal');
+                const mModal = document.getElementById('mockup-modal');
+
+                if (qModal && qModal.classList.contains('active')) {
+                    // We assume the Questionnaire instance handles this, but let's be safe
+                    qModal.classList.remove('active');
+                    document.body.style.overflow = '';
                 }
-                const navHeight = navbar.offsetHeight + 24; // Including top margin
+                if (mModal && mModal.classList.contains('active')) {
+                    mModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+
+                const navHeight = navbar ? (navbar.offsetHeight + 24) : 80;
+
                 window.scrollTo({
                     top: targetElement.offsetTop - navHeight,
                     behavior: "smooth"
                 });
+
+                // Update URL without jump
+                history.pushState(null, null, href);
             }
         });
     });
