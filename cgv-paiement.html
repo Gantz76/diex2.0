@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIEX | Conditions Générales de Vente</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-gray-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .cgv-container {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .cgv-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cgv-header h1 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .cgv-header p {
+            color: var(--primary-light);
+            font-size: 1.1rem;
+        }
+
+        .cgv-content {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: var(--radius-sm);
+            padding: 30px;
+            height: 400px;
+            overflow-y: auto;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Custom Scrollbar for CGV */
+        .cgv-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .cgv-content::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        .cgv-content::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        .cgv-content h2 {
+            color: white;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-family: var(--font-body);
+        }
+
+        .cgv-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .cgv-content p,
+        .cgv-content ul {
+            margin-bottom: 15px;
+        }
+
+        .cgv-content ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        .highlight-clause {
+            background: rgba(29, 78, 216, 0.15);
+            border-left: 4px solid var(--primary-light);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-clause strong {
+            color: var(--primary-light);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .cgv-action {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 25px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+            gap: 15px;
+        }
+
+        .checkbox-container input {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            accent-color: var(--primary-light);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .checkbox-container span {
+            color: white;
+            font-size: 1rem;
+            user-select: none;
+        }
+
+        /* Override btn styles for dark mode */
+        .btn-primary.disabled {
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.3);
+            cursor: not-allowed;
+            pointer-events: none;
+            box-shadow: none;
+        }
+
+        .btn-full {
+            width: 100%;
+            font-size: 1.1rem;
+            padding: 18px;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: var(--text-gray-light);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .cgv-container {
+                padding: 30px 20px;
+            }
+
+            .cgv-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .back-link {
+                top: 15px;
+                left: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html#pricing" class="back-link">
+        <i class="ph ph-arrow-left"></i> Retour aux tarifs
+    </a>
+
+    <div class="cgv-container">
+        <div class="cgv-header">
+            <h1>Validation de votre commande</h1>
+            <p>Veuillez lire et accepter nos Conditions Générales de Vente</p>
+        </div>
+
+        <div class="cgv-content">
+            <h2>1. Objet des prestations</h2>
+            <p>Les présentes Conditions Générales de Vente (CGV) régissent la relation contractuelle entre l'agence DIEX
+                (le Prestataire) et le Client dans le cadre de la création, l'hébergement et la maintenance d'un site
+                web professionnel.</p>
+
+            <h2>2. Paiement Unique (One-Shot)</h2>
+            <p>Dans le cadre de l'offre "Paiement Unique", le Client s'acquitte de la somme totale indiquée à la
+                commande (ex: 2 490€) en une seule fois. Ce paiement transfert la pleine et entière propriété des
+                fichiers sources du site et du nom de domaine (s'il a été réservé par le Prestataire) au Client après
+                livraison finale.</p>
+
+            <div class="highlight-clause">
+                <strong>3. Garantie Technique de 3 Mois</strong>
+                Dans le cadre d'un paiement unique, le Prestataire s'engage à fournir une assistance technique et de
+                maintenance <strong>gratuitement pendant une durée de 3 mois (90 jours)</strong> à compter de la date de
+                mise en ligne officielle du site.
+                <br><br>
+                Cette garantie couvre :
+                <ul>
+                    <li>La résolution de bugs d'affichage ou dysfonctionnements liés au code d'origine.</li>
+                    <li>Les mises à jour de sécurité critiques du CMS ou de l'infrastructure.</li>
+                    <li>Les corrections mineures sur les contenus existants (jusqu'à 2h par mois).</li>
+                </ul>
+                Cette garantie <strong>exclut</strong> les demandes de création de nouvelles pages, l'ajout de
+                fonctionnalités complexes non prévues au devis initial, ou les dysfonctionnements résultant d'une
+                manipulation du site par le Client ou un tiers.
+            </div>
+
+            <h2>4. Maintenance après Garantie (Mois 4+)</h2>
+            <p>À l'issue de la période de garantie de 3 mois mentionnée à l'article 3, le Client est seul responsable de
+                l'hébergement, du renouvellement du nom de domaine et de la maintenance technique de son site internet.
+                Toute intervention technique de l'agence DIEX fera alors l'objet d'un devis séparé facturé au taux
+                horaire en vigueur, ou pourra faire l'objet de la souscription d'un Contrat de Maintenance Mensuelle
+                optionnel.</p>
+
+            <h2>5. Délais de livraison</h2>
+            <p>L'agence DIEX s'engage à livrer le site web dans les délais convenus lors de la phase de cadrage du
+                projet, sous réserve que le Client fournisse l'ensemble des contenus (textes, images, accès) nécessaires
+                à la réalisation dans les temps impartis.</p>
+
+            <h2>6. Force Majeure & Litiges</h2>
+            <p>Les deux parties ne sauraient être tenues responsables d'un retard imputable à un cas de force majeure
+                défini par la jurisprudence française. En cas de litige, les parties s'engagent à privilégier une
+                résolution à l'amiable avant toute procédure judiciaire devant le Tribunal compétent du siège social de
+                l'Agence.</p>
+        </div>
+
+        <div class="cgv-action">
+            <label class="checkbox-container">
+                <input type="checkbox" id="accept-cgv">
+                <span>Je reconnais avoir lu et j'accepte sans réserve les Conditions Générales de Vente, <strong>et je
+                        comprends particulièrement les limites de la Garantie Technique de 3 mois (Clause 3 et 4)
+                        applicable à mon paiement unique.</strong></span>
+            </label>
+
+            <a href="#" id="btn-proceed" class="btn btn-primary btn-full disabled">
+                Accéder au paiement Stripe <i class="ph-bold ph-lock-key"></i>
+            </a>
+            <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: -10px;">Paiement
+                sécurisé crypté SSL</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkbox = document.getElementById('accept-cgv');
+            const btnProceed = document.getElementById('btn-proceed');
+
+            // Get URL parameters to know which plan the user selected
+            const urlParams = new URLSearchParams(window.location.search);
+            const plan = urlParams.get('plan') || 'pro'; // default to pro if not specified
+
+            // Define expected stripe links (same as in app.js for oneshot)
+            const stripeLinks = {
+                'essentiel': 'https://buy.stripe.com/test_dRmaEYehlbrX8SNgz9eUU00',
+                'pro': 'https://buy.stripe.com/test_aFacN6flpbrX7OJ4QreUU02',
+                'premium': 'https://buy.stripe.com/test_6oU4gAc9d7bH7OJ1EfeUU03'
+            };
+
+            const targetStripeLink = stripeLinks[plan];
+
+            checkbox.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    btnProceed.classList.remove('disabled');
+                    btnProceed.classList.add('glow-btn');
+                    btnProceed.href = targetStripeLink;
+                } else {
+                    btnProceed.classList.add('disabled');
+                    btnProceed.classList.remove('glow-btn');
+                    btnProceed.href = "#";
+                    btnProceed.removeAttribute('target');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

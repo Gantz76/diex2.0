@@ -1,0 +1,555 @@
+/* ==========================================================================
+   FULLSCREEN HD MOCKUP MODAL
+   ========================================================================== */
+.mockup-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.98);
+    backdrop-filter: blur(20px);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mockup-modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.m-close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.m-close-btn:hover {
+    background: var(--primary);
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 0 20px var(--primary);
+}
+
+.mockup-container {
+    width: 90vw;
+    height: 85vh;
+    max-width: 1400px;
+    background: #020617;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(40px) scale(0.95);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    display: flex;
+}
+
+.mockup-modal-overlay.active .mockup-container {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+/* Sidebar Info Panel */
+.mockup-sidebar {
+    width: 350px;
+    background: rgba(15, 23, 42, 0.9);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.m-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.m-title {
+    font-family: var(--font-drama);
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.m-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.m-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.m-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--text-gray-light);
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+.m-features li i {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.btn-m-action {
+    margin-top: auto;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Browser Frame */
+.mockup-browser {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #e2e8f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.mb-header {
+    height: 40px;
+    background: #cbd5e1;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 8px;
+    border-bottom: 1px solid #94a3b8;
+}
+
+.mb-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.mb-dot.red {
+    background: #ff5f56;
+}
+
+.mb-dot.yellow {
+    background: #ffbd2e;
+}
+
+.mb-dot.green {
+    background: #27c93f;
+}
+
+.mb-url {
+    background: white;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 auto;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: #64748b;
+    font-family: sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mb-content {
+    flex: 1;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: white;
+}
+
+/* --------------------------------------------------------------------------
+   MOCKUP TEMPLATES - SPECIFIC STYLES
+   -------------------------------------------------------------------------- */
+
+/* 1. Corporate B2B */
+.tpl-corporate {
+    background: #0f172a;
+    color: white;
+    min-height: 150%;
+    font-family: 'Inter', sans-serif;
+}
+
+.c-nav {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.c-hero {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.c-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.c-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.c-stat-box {
+    text-align: center;
+}
+
+.c-stat-box .num {
+    font-size: 2.5rem;
+    color: #3b82f6;
+    font-weight: 700;
+}
+
+.c-chart {
+    width: 80%;
+    height: 200px;
+    margin: 40px auto;
+    background: linear-gradient(to top, rgba(59, 130, 246, 0.2), transparent);
+    border-bottom: 2px solid #3b82f6;
+    position: relative;
+}
+
+/* 2. Immobilier Prestige */
+.tpl-immo {
+    background: #fafaf9;
+    color: #1c1917;
+    min-height: 150%;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.i-hero {
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1600') center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.i-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.i-hero h1 {
+    position: relative;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.i-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+}
+
+.i-card {
+    height: 300px;
+    background: #e7e5e4;
+    position: relative;
+    overflow: hidden;
+}
+
+.i-price {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+/* 3. SaaS App */
+.tpl-saas {
+    background: #f8fafc;
+    color: #0f172a;
+    min-height: 100%;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+}
+
+.s-sidebar {
+    width: 220px;
+    background: white;
+    border-right: 1px solid #e2e8f0;
+    padding: 20px;
+}
+
+.s-main {
+    flex: 1;
+    padding: 30px;
+}
+
+.s-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.s-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.s-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.s-table {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    height: 300px;
+}
+
+/* 4. Artisan */
+.tpl-artisan {
+    background: white;
+    color: #1f2937;
+    min-height: 150%;
+    font-family: 'Inter', sans-serif;
+}
+
+.a-nav {
+    background: #b45309;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.a-hero {
+    display: flex;
+    padding: 60px 40px;
+    align-items: center;
+    background: #fef3c7;
+}
+
+.a-hero-text {
+    flex: 1;
+}
+
+.a-hero-text h1 {
+    font-size: 3rem;
+    color: #92400e;
+    margin-bottom: 20px;
+}
+
+.a-hero-form {
+    width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.a-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+/* 5. Fitness */
+.tpl-fitness {
+    background: #18181b;
+    color: white;
+    min-height: 150%;
+    font-family: 'Outfit', sans-serif;
+}
+
+.f-nav {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.f-hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    position: relative;
+}
+
+.f-hero::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80') center/cover;
+    opacity: 0.5;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.f-hero h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 0.9;
+    color: #bef264;
+    z-index: 10;
+    margin-bottom: 20px;
+}
+
+/* 6. Beaute/Spa */
+.tpl-beaute {
+    background: #fdfbf7;
+    color: #4a4a4a;
+    min-height: 150%;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.b-nav {
+    padding: 20px 40px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.b-logo {
+    font-size: 2rem;
+    letter-spacing: 4px;
+}
+
+.b-hero {
+    padding: 80px 40px;
+    text-align: center;
+    background: #f3cdc0;
+    color: white;
+}
+
+.b-hero h1 {
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.b-services {
+    display: flex;
+    gap: 30px;
+    padding: 60px 40px;
+    justify-content: center;
+}
+
+.b-service {
+    width: 250px;
+    text-align: center;
+}
+
+.b-service img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100px 100px 0 0;
+    margin-bottom: 15px;
+}
+
+/* Animation Utils */
+.mb-content>* {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFade 0.6s ease forwards;
+}
+
+.mb-content>*:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.mb-content>*:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.mb-content>*:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.mb-content>*:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes slideUpFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 992px) {
+    .mockup-container {
+        flex-direction: column-reverse;
+        overflow-y: auto;
+        height: 95vh;
+    }
+
+    .mockup-sidebar {
+        width: 100%;
+        border-right: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .mockup-browser {
+        min-height: 50vh;
+    }
+}

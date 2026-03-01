@@ -16,6 +16,8 @@
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/questionnaire.css">
+    <link rel="stylesheet" href="css/mockups.css">
     <!-- Favicon / Logo -->
     <link rel="icon" type="image/svg+xml"
         href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/></svg>'>
@@ -75,15 +77,14 @@
 
     <!-- Main Content -->
     <main>
-        <!-- 1. HERO WITH VIDEO -->
+        <!-- 1. HERO WITH ANIMATED WAVES -->
         <section class="hero" id="hero">
-            <div class="hero-video-wrapper">
-                <video autoplay loop muted playsinline class="hero-video"
-                    poster="https://img.freepik.com/free-video/abstract-blue-particles-background_1110-3882.jpg?t=st=1690000000~exp=1690000000~hmac=x">
-                    <!-- Tech elegant lines video from Pixabay CDN -->
-                    <source src="https://cdn.pixabay.com/video/2023/10/22/186115-877233261_large.mp4" type="video/mp4">
-                    <source src="https://cdn.pixabay.com/video/2021/08/11/84705-587841165_large.mp4" type="video/mp4">
-                </video>
+            <div class="hero-bg-wrapper">
+                <div class="wave-bg"></div>
+                <div class="wave-curve wave-curve-1"></div>
+                <div class="wave-curve wave-curve-2"></div>
+                <div class="wave-curve wave-curve-3"></div>
+                <div class="wave-curve wave-curve-4"></div>
                 <div class="hero-overlay"></div>
             </div>
 
@@ -103,8 +104,8 @@
                     <a href="#offres" class="btn btn-primary btn-lg glow-btn">
                         Voir les offres <i class="ph-bold ph-arrow-right"></i>
                     </a>
-                    <a href="mailto:diex.agence@gmail.com" class="btn btn-glass btn-lg">
-                        <i class="ph-bold ph-envelope-simple"></i> Demander un devis
+                    <a href="#" class="btn btn-glass btn-lg trigger-questionnaire">
+                        <i class="ph-bold ph-lightning"></i> Obtenir une analyse gratuite
                     </a>
                 </div>
             </div>
@@ -223,9 +224,10 @@
 
         <!-- 2.5 PHILOSOPHY (Manifesto) -->
         <section class="philosophy" id="philosophie">
-            <div class="philosophy-bg">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
-                    alt="Abstract dark waves" class="philosophy-img">
+            <div class="philosophy-bg philosophy-wave-wrapper">
+                <div class="wave-bg"></div>
+                <div class="wave-curve wave-curve-1 philo-wave-1"></div>
+                <div class="wave-curve wave-curve-2 philo-wave-2"></div>
                 <div class="philosophy-overlay"></div>
             </div>
             <div class="container relative z-10 text-center">
@@ -360,61 +362,60 @@
 
                 <div class="pricing-grid">
                     <!-- Essentiel -->
-                    <div class="pricing-card tilt-card-light reveal-up">
+                    <div class="pricing-card highlight tilt-card-light reveal-up">
+                        <div class="popular-badge"><i class="ph-fill ph-star"></i> Le plus choisi</div>
+                        <div class="highlight-glow"></div>
                         <div class="p-header">
                             <div class="p-icon"><i class="ph-duotone ph-paper-plane-tilt"></i></div>
                             <h3>Essentiel</h3>
                             <p class="p-target">Pour lancer votre activité</p>
                         </div>
-                        <div class="p-amount">
-                            <div class="price">
-                                <h3>990€</h3><span>/projet</span>
+                        <div class="p-amount pricing-amount-update">
+                            <div class="price price-monthly">
+                                <h3>150€</h3><span>/mois</span>
+                            </div>
+                            <div class="price price-oneshot d-none">
+                                <h3>2 500€</h3><span>/projet</span>
                             </div>
                         </div>
-                        <div class="p-features">
+                        <div class="price-monthly"
+                            style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: -15px; margin-bottom: 20px;">
+                            + 500 € (Mise en service)
+                        </div>
+                        <div class="p-features" style="flex: 1;">
                             <ul>
                                 <li>
                                     <i class="ph-bold ph-browser"></i>
-                                    <div class="f-text">
-                                        <strong>Site vitrine (3-5 pages)</strong>
-                                        <span>Design moderne, adapté mobile</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="ph-bold ph-envelope-simple"></i>
-                                    <div class="f-text">
-                                        <strong>Formulaire qualifié</strong>
-                                        <span>Anti-spam & notifications en temps réel</span>
+                                    <div class="f-text" style="display:flex; align-items:center;">
+                                        <strong style="margin-bottom:0;">Une interface percutante sur une page
+                                            unique</strong>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="ph-bold ph-magnifying-glass"></i>
-                                    <div class="f-text">
-                                        <strong>Fondations SEO</strong>
-                                        <span>Balises optimisées & indexation Google</span>
+                                    <div class="f-text" style="display:flex; align-items:center;">
+                                        <strong style="margin-bottom:0;">Un référencement Google optimisé</strong>
                                     </div>
                                 </li>
                                 <li>
-                                    <i class="ph-bold ph-shield-check"></i>
-                                    <div class="f-text">
-                                        <strong>Sécurité & Hébergement</strong>
-                                        <span>SSL inclus, serveurs européens rapides</span>
+                                    <i class="ph-bold ph-device-mobile"></i>
+                                    <div class="f-text" style="display:flex; align-items:center;">
+                                        <strong style="margin-bottom:0;">Adaptation parfaite sur mobile</strong>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="p-action">
-                            <a href="https://buy.stripe.com/test_dRmaEYehlbrX8SNgz9eUU00"
-                                class="btn btn-outline btn-full payment-btn" id="btn-essentiel">Payer maintenant</a>
+                        <div class="p-action" style="margin-top:auto;">
+                            <a href="https://buy.stripe.com/8x23cvfFOdRF9AX2vQfAc05"
+                                class="btn btn-primary glow-btn btn-full payment-btn" id="btn-essentiel">Payer
+                                maintenant</a>
                             <a href="mailto:diex.agence@gmail.com" class="btn btn-ghost btn-full mt-2">Nous
                                 contacter</a>
                         </div>
                     </div>
 
-                    <!-- Pro (Highlight) -->
-                    <div class="pricing-card highlight tilt-card-light reveal-up delay-1">
-                        <div class="popular-badge"><i class="ph-fill ph-star"></i> Le plus choisi</div>
-                        <div class="highlight-glow"></div>
+                    <!-- Pro -->
+                    <div class="pricing-card tilt-card-light reveal-up delay-1">
                         <div class="p-header">
                             <div class="p-icon"><i class="ph-duotone ph-rocket"></i></div>
                             <h3>Pro</h3>
@@ -422,48 +423,43 @@
                         </div>
                         <div class="p-amount pricing-amount-update">
                             <div class="price price-monthly">
-                                <h3>349€</h3><span>/mois</span>
+                                <h3>250€</h3><span>/mois</span>
                             </div>
                             <div class="price price-oneshot d-none">
-                                <h3>2 490€</h3><span>/projet</span>
+                                <h3>3 500€</h3><span>/projet</span>
                             </div>
                         </div>
-                        <div class="p-features">
+                        <div class="price-monthly"
+                            style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: -15px; margin-bottom: 20px;">
+                            + 600 € (Mise en service)
+                        </div>
+                        <div class="p-features" style="flex: 1;">
                             <ul>
                                 <li>
                                     <i class="ph-bold ph-stack"></i>
-                                    <div class="f-text">
-                                        <strong>Site expert (5-10 pages)</strong>
-                                        <span>Structure optimisée pour générer des demandes</span>
+                                    <div class="f-text" style="display:flex; align-items:center;">
+                                        <strong style="margin-bottom:0;">Site multipages complet (jusqu'à 5
+                                            pages)</strong>
                                     </div>
                                 </li>
                                 <li>
-                                    <i class="ph-bold ph-map-pin-line"></i>
-                                    <div class="f-text">
-                                        <strong>SEO Local Avancé</strong>
-                                        <span>Stratégie sur votre secteur géographique</span>
+                                    <i class="ph-bold ph-calendar-check"></i>
+                                    <div class="f-text" style="display:flex; align-items:center;">
+                                        <strong style="margin-bottom:0;">Prise de rendez-vous en ligne
+                                            automatisée</strong>
                                     </div>
                                 </li>
                                 <li>
-                                    <i class="ph-bold ph-star-half"></i>
-                                    <div class="f-text">
-                                        <strong>Module d'Avis Clients</strong>
-                                        <span>Récolte automatisée de Google Reviews</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="ph-bold ph-speedometer"></i>
-                                    <div class="f-text">
-                                        <strong>Performance Extreme</strong>
-                                        <span>Temps de chargement &lt; 1sec garanti</span>
+                                    <i class="ph-bold ph-image"></i>
+                                    <div class="f-text" style="display:flex; align-items:center;">
+                                        <strong style="margin-bottom:0;">Galerie photo/vidéo haut de gamme</strong>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="p-deposit d-none"></div>
-                        <div class="p-action">
-                            <a href="https://buy.stripe.com/test_aFa28sddh8fLglfer1eUU01"
-                                class="btn btn-primary glow-btn btn-full payment-btn" id="btn-pro">Payer maintenant</a>
+                        <div class="p-action" style="margin-top:auto;">
+                            <a href="https://buy.stripe.com/6oUaEX9hq5l928v6M6fAc06"
+                                class="btn btn-outline btn-full payment-btn" id="btn-pro">Payer maintenant</a>
                             <a href="mailto:diex.agence@gmail.com" class="btn btn-ghost btn-full mt-2">Nous
                                 contacter</a>
                         </div>
@@ -473,52 +469,53 @@
                     <div class="pricing-card tilt-card-light reveal-up delay-2">
                         <div class="p-header">
                             <div class="p-icon"><i class="ph-duotone ph-crown"></i></div>
-                            <h3>Premium</h3>
-                            <p class="p-target">Expérience digitale sur-mesure</p>
+                            <h3>Prestige</h3>
+                            <p class="p-target">Identique visuel DIEX</p>
                         </div>
-                        <div class="p-amount" style="padding-bottom: 16px;">
-                            <div class="price" style="margin-bottom: 8px;">
-                                <h3>4 490€</h3><span> initial</span>
+                        <div class="p-amount pricing-amount-update">
+                            <div class="price price-monthly">
+                                <h3>350€</h3><span>/mois</span>
                             </div>
-                            <div class="price">
-                                <h3 style="font-size: 2rem;">+ 499€</h3><span>/mois</span>
+                            <div class="price price-oneshot d-none">
+                                <h3>4 500€</h3><span>/projet</span>
                             </div>
                         </div>
-                        <div class="p-features">
+                        <div class="price-monthly"
+                            style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: -15px; margin-bottom: 20px;">
+                            + 700 € (Mise en service)
+                        </div>
+                        <div class="p-features" style="flex: 1;">
                             <ul>
                                 <li>
                                     <i class="ph-bold ph-diamonds-four"></i>
-                                    <div class="f-text">
-                                        <strong>Design Exclusif (UI/UX)</strong>
-                                        <span>Expérience animée, micro-interactions 3D</span>
+                                    <div class="f-text" style="display:flex; align-items:center;">
+                                        <strong style="margin-bottom:0;">L'expérience numérique la plus
+                                            immersive</strong>
                                     </div>
                                 </li>
                                 <li>
-                                    <i class="ph-bold ph-chart-line-up"></i>
-                                    <div class="f-text">
-                                        <strong>Automatisations complexes</strong>
-                                        <span>Sync CRM, Stripe, Calendly, Zapier...</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="ph-bold ph-shopping-bag"></i>
-                                    <div class="f-text">
-                                        <strong>E-Commerce / Réservation</strong>
-                                        <span>Vente en ligne fluide intégrée</span>
+                                    <i class="ph-bold ph-magic-wand"></i>
+                                    <div class="f-text" style="display:flex; align-items:center;">
+                                        <strong style="margin-bottom:0;">Micro-interactions et animations de
+                                            pointe</strong>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="ph-bold ph-headset"></i>
-                                    <div class="f-text">
-                                        <strong>Support VIP Prioritaire</strong>
-                                        <span>Ligne directe avec le développeur</span>
+                                    <div class="f-text" style="display:flex; align-items:center;">
+                                        <strong style="margin-bottom:0;">Accompagnement prioritaire et exclusif</strong>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="ph-bold ph-share-network"></i>
+                                    <div class="f-text" style="display:flex; align-items:center;">
+                                        <strong style="margin-bottom:0;">Intégration de vos flux sociaux</strong>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="p-deposit d-none"></div>
-                        <div class="p-action">
-                            <a href="https://buy.stripe.com/test_6oU4gAc9d7bH7OJ1EfeUU03"
+                        <div class="p-action" style="margin-top:auto;">
+                            <a href="https://buy.stripe.com/aFa3cvdxG6pdaF11rMfAc07"
                                 class="btn btn-outline btn-full payment-btn" id="btn-premium">Payer maintenant</a>
                             <a href="mailto:diex.agence@gmail.com" class="btn btn-ghost btn-full mt-2">Nous
                                 contacter</a>
@@ -542,6 +539,10 @@
                         <div class="p-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=800&auto=format&fit=crop"
                                 alt="Corporate Dashboard">
+                            <div class="p-overlay">
+                                <button class="btn btn-primary glow-btn open-mockup-btn" data-target="corporate"><i
+                                        class="ph-bold ph-eye"></i> Aperçu HD</button>
+                            </div>
                         </div>
                         <div class="p-info">
                             <h4>Corporate & B2B</h4>
@@ -553,6 +554,10 @@
                         <div class="p-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop"
                                 alt="Immobilier Premium">
+                            <div class="p-overlay">
+                                <button class="btn btn-primary glow-btn open-mockup-btn" data-target="immo"><i
+                                        class="ph-bold ph-eye"></i> Aperçu HD</button>
+                            </div>
                         </div>
                         <div class="p-info">
                             <h4>Immobilier Prestige</h4>
@@ -564,6 +569,10 @@
                         <div class="p-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=800&auto=format&fit=crop"
                                 alt="Application Web SaaS">
+                            <div class="p-overlay">
+                                <button class="btn btn-primary glow-btn open-mockup-btn" data-target="saas"><i
+                                        class="ph-bold ph-eye"></i> Aperçu HD</button>
+                            </div>
                         </div>
                         <div class="p-info">
                             <h4>Application SaaS</h4>
@@ -575,6 +584,10 @@
                         <div class="p-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop"
                                 alt="Artisan">
+                            <div class="p-overlay">
+                                <button class="btn btn-primary glow-btn open-mockup-btn" data-target="artisan"><i
+                                        class="ph-bold ph-eye"></i> Aperçu HD</button>
+                            </div>
                         </div>
                         <div class="p-info">
                             <h4>Artisan Engagé</h4>
@@ -586,6 +599,10 @@
                         <div class="p-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=800&auto=format&fit=crop"
                                 alt="Fitness Coach">
+                            <div class="p-overlay">
+                                <button class="btn btn-primary glow-btn open-mockup-btn" data-target="fitness"><i
+                                        class="ph-bold ph-eye"></i> Aperçu HD</button>
+                            </div>
                         </div>
                         <div class="p-info">
                             <h4>Coaching & Fitness</h4>
@@ -597,6 +614,10 @@
                         <div class="p-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop"
                                 alt="Institut Beauty">
+                            <div class="p-overlay">
+                                <button class="btn btn-primary glow-btn open-mockup-btn" data-target="beaute"><i
+                                        class="ph-bold ph-eye"></i> Aperçu HD</button>
+                            </div>
                         </div>
                         <div class="p-info">
                             <h4>Beauté & Spa</h4>
@@ -656,6 +677,166 @@
         </div>
     </footer>
 
+    <!-- QUESTIONNAIRE MODAL -->
+    <div class="q-modal-overlay" id="q-modal">
+        <div class="q-modal-container">
+            <div class="q-progress-container">
+                <div class="q-progress-bar"></div>
+            </div>
+            <button class="q-close-btn"><i class="ph-bold ph-x"></i></button>
+
+            <div class="q-viewport">
+                <!-- Step 0: Intro (Auto transition) -->
+                <div class="q-step" id="q-step-0">
+                    <span class="q-step-emoji">✨</span>
+                    <h2 class="q-step-title">Préparation de votre analyse personnalisée...</h2>
+                    <p class="q-step-subtitle">Cette étape nous permet de comprendre votre vision pour vous proposer la
+                        solution la plus adaptée sous 24h.</p>
+                    <div style="display: flex; gap: 8px; margin-top: 20px;">
+                        <span
+                            style="width: 10px; height: 10px; border-radius: 50%; background: var(--primary-light); animation: bounce 1s infinite;"></span>
+                        <span
+                            style="width: 10px; height: 10px; border-radius: 50%; background: var(--primary-light); animation: bounce 1s 0.2s infinite;"></span>
+                        <span
+                            style="width: 10px; height: 10px; border-radius: 50%; background: var(--primary-light); animation: bounce 1s 0.4s infinite;"></span>
+                    </div>
+                </div>
+
+                <!-- Step 1 -->
+                <div class="q-step" id="q-step-1">
+                    <h2 class="q-step-title">1. Votre Identité</h2>
+                    <p class="q-step-subtitle">Quel est le nom de votre établissement ou de votre entreprise ?</p>
+                    <input type="text" class="q-input" id="q-input-1"
+                        placeholder="Ex: Plomberie Martin, Restaurant L'Étoile..." autocomplete="off">
+                    <div class="q-action-row">
+                        <button class="btn btn-primary" id="q-btn-1">Continuer <i
+                                class="ph-bold ph-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="q-step" id="q-step-2">
+                    <h2 class="q-step-title">2. Votre Présence Actuelle</h2>
+                    <p class="q-step-subtitle">Comment vos clients vous trouvent-ils aujourd'hui ?</p>
+                    <div class="q-options">
+                        <button class="q-option-btn"><i class="ph-duotone ph-users-three"></i> Bouche-à-oreille
+                            uniquement.</button>
+                        <button class="q-option-btn"><i class="ph-duotone ph-instagram-logo"></i> Réseaux sociaux
+                            (Facebook, Instagram).</button>
+                        <button class="q-option-btn"><i class="ph-duotone ph-map-pin-line"></i> Fiche Google (Avis
+                            clients).</button>
+                        <button class="q-option-btn"><i class="ph-duotone ph-question"></i> Autre.</button>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="q-step" id="q-step-3">
+                    <h2 class="q-step-title">3. Votre Identité Visuelle</h2>
+                    <p class="q-step-subtitle">Quelle atmosphère souhaitez-vous projeter pour votre futur site ?</p>
+                    <div class="q-options">
+                        <button class="q-option-btn" style="align-items: flex-start; line-height: 1.4;"><i
+                                class="ph-duotone ph-diamond" style="margin-top: 3px;"></i> <span><b>Le Grand Luxe :</b>
+                                Un design sombre, épuré et mystérieux (comme votre interface actuelle).</span></button>
+                        <button class="q-option-btn" style="align-items: flex-start; line-height: 1.4;"><i
+                                class="ph-duotone ph-sun" style="margin-top: 3px;"></i> <span><b>La Clarté Moderne :</b>
+                                Un style lumineux, blanc pur, avec beaucoup d'espace et de fraîcheur.</span></button>
+                        <button class="q-option-btn" style="align-items: flex-start; line-height: 1.4;"><i
+                                class="ph-duotone ph-palette" style="margin-top: 3px;"></i> <span><b>L'Audace Créative
+                                    :</b> Des couleurs vives, des typographies imposantes et des
+                                animations.</span></button>
+                        <button class="q-option-btn" style="align-items: flex-start; line-height: 1.4;"><i
+                                class="ph-duotone ph-bank" style="margin-top: 3px;"></i> <span><b>Le Traditionnel
+                                    Prestige :</b> Un style classique, rassurant, utilisant des matières (bois,
+                                pierre).</span></button>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="q-step" id="q-step-4">
+                    <h2 class="q-step-title">4. Le Diagnostic Visuel</h2>
+                    <p class="q-step-subtitle">Souhaitez-vous recevoir une démonstration visuelle de votre futur site ?
+                    </p>
+                    <div class="q-options">
+                        <button class="q-option-btn"><i class="ph-duotone ph-magic-wand"></i> Oui, je veux voir le
+                            potentiel de mon image de marque.</button>
+                        <button class="q-option-btn"><i class="ph-duotone ph-phone-call"></i> Non, je souhaite d'abord
+                            un échange téléphonique.</button>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="q-step" id="q-step-5">
+                    <h2 class="q-step-title">5. Finalisation</h2>
+                    <p class="q-step-subtitle">Où devons-nous vous envoyer votre analyse stratégique ?</p>
+                    <input type="text" class="q-input" id="q-input-name" placeholder="Votre Prénom et Nom">
+                    <input type="email" class="q-input" id="q-input-email" placeholder="Votre Adresse E-mail"
+                        style="margin-bottom: 20px;">
+                    <input type="tel" class="q-input" id="q-input-phone"
+                        placeholder="Numéro de téléphone (pour la réponse sous 24h)">
+                    <div class="q-action-row">
+                        <button class="btn btn-primary" id="q-btn-5">Soumettre ma demande <i
+                                class="ph-bold ph-paper-plane-tilt"></i></button>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; margin-top: 10px; color: var(--text-muted);">Vos
+                        données sont cryptées et confidentielles.</p>
+                </div>
+
+                <!-- Step 6: Success -->
+                <div class="q-step" id="q-step-6"
+                    style="text-align: center; padding-top: 0px; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="q-success-icon"><i class="ph-bold ph-check"></i></div>
+                    </div>
+                    <h2 class="q-step-title">Merci <span id="q-success-name"></span> !</h2>
+                    <p class="q-step-subtitle" style="margin-bottom: 15px;">Votre demande est entre les mains de nos
+                        experts.</p>
+                    <p
+                        style="color: var(--text-gray-light); margin-bottom: 30px; font-size: 0.95rem; line-height: 1.5;">
+                        Pendant que nous analysons votre
+                        dossier, vous pouvez consulter nos réalisations ou nous appeler directement.</p>
+                    <div
+                        style="display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                        <a href="#exemples" class="btn btn-primary"
+                            onclick="document.querySelector('.q-close-btn').click()">Voir les projets</a>
+                        <a href="tel:0600000000" class="btn btn-outline glow-btn"><i class="ph-bold ph-phone"></i>
+                            Appeler</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOCKUP FULLSCREEN MODAL -->
+    <div class="mockup-modal-overlay" id="mockup-modal">
+        <button class="m-close-btn"><i class="ph-bold ph-x"></i></button>
+        <div class="mockup-container">
+            <!-- Sidebar Info -->
+            <div class="mockup-sidebar">
+                <div class="m-badge" id="m-badge">Modèle B2B</div>
+                <h2 class="m-title" id="m-title">Corporate</h2>
+                <p class="m-desc" id="m-desc">Description of the specific template.</p>
+                <ul class="m-features" id="m-features">
+                    <!-- Features injected by JS -->
+                </ul>
+                <button class="btn btn-primary glow-btn btn-m-action" id="m-action-btn">Obtenir cette interface</button>
+            </div>
+
+            <!-- Browser Frame -->
+            <div class="mockup-browser">
+                <div class="mb-header">
+                    <div class="mb-dot red"></div>
+                    <div class="mb-dot yellow"></div>
+                    <div class="mb-dot green"></div>
+                    <div class="mb-url"><i class="ph-bold ph-lock-key" style="margin-right:6px;"></i> <span
+                            id="mb-url-text">https://</span></div>
+                </div>
+                <div class="mb-content" id="mb-content">
+                    <!-- HTML Mockup Output Here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -663,6 +844,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <!-- Custom App Logic -->
     <script src="js/app.js"></script>
+    <script src="js/questionnaire.js"></script>
+    <script src="js/mockups.js"></script>
 </body>
 
 </html>

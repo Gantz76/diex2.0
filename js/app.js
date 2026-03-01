@@ -269,16 +269,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const stripeLinks = {
             essentiel: {
-                monthly: 'https://buy.stripe.com/test_dRmaEYehlbrX8SNgz9eUU00',
-                oneshot: 'https://buy.stripe.com/test_dRmaEYehlbrX8SNgz9eUU00'
+                monthly: 'https://buy.stripe.com/8x23cvfFOdRF9AX2vQfAc05',
+                oneshot: 'https://buy.stripe.com/5kQ00j2T24h5eVhdaufAc08'
             },
             pro: {
-                monthly: 'https://buy.stripe.com/test_aFa28sddh8fLglfer1eUU01',
-                oneshot: 'https://buy.stripe.com/test_aFacN6flpbrX7OJ4QreUU02'
+                monthly: 'https://buy.stripe.com/6oUaEX9hq5l928v6M6fAc06',
+                oneshot: 'https://buy.stripe.com/4gM8wPdxGeVJ14rb2mfAc09'
             },
             premium: {
-                monthly: 'https://buy.stripe.com/test_6oU4gAc9d7bH7OJ1EfeUU03',
-                oneshot: 'https://buy.stripe.com/test_6oU4gAc9d7bH7OJ1EfeUU03'
+                monthly: 'https://buy.stripe.com/aFa3cvdxG6pdaF11rMfAc07',
+                oneshot: 'https://buy.stripe.com/3cI9AT2T28xl9AX1rMfAc0a'
             }
         };
 
