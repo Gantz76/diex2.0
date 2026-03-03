@@ -735,7 +735,7 @@ a:not(.btn):hover {
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 10;
     text-align: center;
     max-width: 900px;
     padding-bottom: 60px;
@@ -2042,5 +2042,67 @@ input:checked+.toggle-slider:before {
 
     .p-amount .price h3 {
         font-size: 3rem;
+    }
+
+    .philosophy-statement.massive {
+        font-size: 2.5rem;
+    }
+
+    .philosophy-statement.neutral {
+        font-size: 1.2rem;
+    }
+
+    /* Mobile fixes for protocol stacking cards */
+    .stacking-card .card-inner {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .p-num {
+        border-right: none;
+        border-bottom: 1px solid var(--border-light);
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .p-content {
+        padding: 20px 0;
+    }
+
+    .p-visual {
+        height: 200px;
+    }
+
+    /* Fixed buttons overflowing and sizes on mobile */
+    .btn-lg,
+    .btn-xl {
+        padding: 14px 20px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 100%;
+        white-space: normal;
+        word-break: break-all;
+        /* Fallback for very long emails */
+        height: auto;
+    }
+
+    .hero-content {
+        padding-bottom: 100px;
+        /* Give more space so elements don't overlap with waves */
+    }
+
+    /* Disable sticky protocol cards on mobile as they often exceed viewport height when stacked */
+    .protocol-card {
+        position: relative;
+        top: auto;
+        height: auto;
+        min-height: auto;
+        margin-bottom: 24px;
+    }
+
+    .protocol-container {
+        padding: 60px 0;
     }
 }

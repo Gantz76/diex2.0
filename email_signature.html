@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Signature Email DIEX</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f3f4f6;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .instruction-box {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 30px;
+            max-width: 600px;
+            border-left: 5px solid #1D4ED8;
+        }
+
+        .instruction-box h2 {
+            margin-top: 0;
+            color: #111827;
+        }
+
+        .instruction-box p {
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        .instruction-box ol {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .signature-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="instruction-box">
+        <h2>Comment installer votre signature ?</h2>
+        <ol>
+            <li>Dans l'encadré blanc ci-dessous, <strong>sélectionnez tout le contenu</strong> (cliquez et glissez votre
+                souris, ou faites Ctrl+A).</li>
+            <li>Faites <strong>Copier</strong> (Ctrl+C).</li>
+            <li>Allez dans les <strong>paramètres de votre boîte mail</strong> (Gmail, Outlook, etc.) à la section
+                "Signature".</li>
+            <li>Faites <strong>Coller</strong> (Ctrl+V) dans la zone de texte de la signature et enregistrez.</li>
+        </ol>
+        <p><em>Note : Vous pouvez modifier les textes (Prénom, Nom, Téléphone) directement dans le code source de ce
+                fichier ou une fois collé dans votre boîte mail.</em></p>
+    </div>
+
+    <!-- C'EST CETTE PARTIE EXACTE QU'IL FAUT COPIER -->
+    <div class="signature-container">
+        <table cellpadding="0" cellspacing="0" border="0"
+            style="font-family: Arial, sans-serif; font-size: 13px; color: #333333; max-width: 600px; border-collapse: collapse;">
+            <!-- LIGNE 1 : LOGO ET SEPARATEUR -->
+            <tr>
+                <td style="padding-bottom: 20px; border-bottom: 2px solid #1D4ED8;">
+                    <!-- L'image de la couronne Phosphorus et le texte -->
+                    <table cellpadding="0" cellspacing="0" border="0" style="margin: 0;">
+                        <tr>
+                            <td style="padding-right: 10px;">
+                                <!-- Couronne Phosphor au format image encodée base64 pour être universelle -->
+                                <img src="https://img.icons8.com/ios-filled/50/1d4ed8/crown.png" alt="DIEX Crown"
+                                    width="28" height="28"
+                                    style="display: block; border: none; outline: none; text-decoration: none;">
+                            </td>
+                            <td>
+                                <span
+                                    style="font-family: 'Outfit', Arial, sans-serif; font-size: 24px; font-weight: 800; color: #1D4ED8; letter-spacing: 1px;">DIEX</span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- LIGNE 2 : IDENTITÉ -->
+            <tr>
+                <td style="padding-top: 20px; padding-bottom: 5px;">
+                    <span style="font-size: 16px; font-weight: bold; color: #020617; text-transform: uppercase;">Raphaël
+                        Nocq</span>
+                </td>
+            </tr>
+
+            <!-- LIGNE 3 : TITRE / DÉPARTEMENT -->
+            <tr>
+                <td style="padding-bottom: 8px; color: #475569; line-height: 1.5;">
+                    <span style="font-weight: bold;">Directeur de Projet | Lead Web Architect</span><br>
+                    Architecture Digitale & Visibilité Premium<br>
+                    <span style="font-weight: bold; color: #1D4ED8;">DIEX Création de Sites Indépendants</span>
+                </td>
+            </tr>
+
+            <!-- LIGNE 4 : CONTACT -->
+            <tr>
+                <td style="padding-bottom: 12px; color: #475569; line-height: 1.6;">
+                    <span style="display: inline-block; width: 100px; font-weight: bold;">Ligne directe :</span> <span
+                        style="color: #020617;">+33 (0)7 83 56 56 67</span><br>
+                    <span style="display: inline-block; width: 100px; font-weight: bold;">Email :</span> <a
+                        href="mailto:raphael@diexdigital.com"
+                        style="color: #1D4ED8; text-decoration: none; font-weight: bold;">raphael@diexdigital.com</a>
+                </td>
+            </tr>
+
+            <!-- LIGNE 5 : LIEN & RÉSEAUX -->
+            <tr>
+                <td style="padding-top: 8px;">
+                    <table cellpadding="0" cellspacing="0" border="0" style="margin: 0;">
+                        <tr>
+                            <td style="padding-right: 20px;">
+                                <a href="http://192.168.1.14:3000"
+                                    style="color: #1D4ED8; text-decoration: none; font-weight: bold; font-size: 14px;">L'Expérience
+                                    DIEX</a>
+                            </td>
+                            <td style="padding-right: 8px;">
+                                <a href="#" style="text-decoration: none; outline: none;">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="FB" width="18"
+                                        height="18" style="display: block; border: none; opacity: 0.8;">
+                                </a>
+                            </td>
+                            <td style="padding-right: 8px;">
+                                <a href="#" style="text-decoration: none; outline: none;">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="IN" width="18"
+                                        height="18" style="display: block; border: none; opacity: 0.8;">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" style="text-decoration: none; outline: none;">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="IG" width="18"
+                                        height="18" style="display: block; border: none; opacity: 0.8;">
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
