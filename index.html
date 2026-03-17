@@ -537,10 +537,7 @@
                         <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); padding: 32px 24px; border-radius: 20px; flex: 1; min-width: 250px; backdrop-filter: blur(10px); transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
                             <h4 style="font-weight: 600; margin-bottom: 8px; color: var(--text-gray-light);">Paiement Comptant</h4>
                             <div style="font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 24px;">1 200€</div>
-                            <form action="/create-checkout-session" method="POST" style="width: 100%; margin: 0;">
-                                <input type="hidden" name="lookup_key" value="offre_lancement_1x" />
-                                <button type="submit" class="btn btn-outline" style="width: 100%; border-color: rgba(255,255,255,0.3); color: white;">Payer 1x</button>
-                            </form>
+                            <a href="#" class="btn btn-outline" style="width: 100%; border-color: rgba(255,255,255,0.3); color: white;">Payer 1x</a>
                         </div>
                         
                         <!-- Option 2: 3 times -->
@@ -548,20 +545,14 @@
                             <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--primary); font-size: 0.8rem; padding: 6px 16px; border-radius: 20px; font-weight: 700; white-space: nowrap; box-shadow: 0 4px 10px rgba(29,78,216,0.4);">Le plus confortable</div>
                             <h4 style="font-weight: 600; margin-bottom: 8px; color: var(--text-gray-light);">Paiement en 3 fois</h4>
                             <div style="font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 24px;">400€<span style="font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.6);"> /mois</span></div>
-                            <form action="/create-checkout-session" method="POST" style="width: 100%; margin: 0;">
-                                <input type="hidden" name="lookup_key" value="offre_lancement_3x" />
-                                <button type="submit" class="btn btn-primary glow-btn" style="width: 100%;">Payer 3x</button>
-                            </form>
+                            <a href="#" class="btn btn-primary glow-btn" style="width: 100%;">Payer 3x</a>
                         </div>
                         
                         <!-- Option 3: 6 times -->
                         <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); padding: 32px 24px; border-radius: 20px; flex: 1; min-width: 250px; backdrop-filter: blur(10px); transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
                             <h4 style="font-weight: 600; margin-bottom: 8px; color: var(--text-gray-light);">Paiement en 6 fois</h4>
                             <div style="font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 24px;">200€<span style="font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.6);"> /mois</span></div>
-                            <form action="/create-checkout-session" method="POST" style="width: 100%; margin: 0;">
-                                <input type="hidden" name="lookup_key" value="offre_lancement_6x" />
-                                <button type="submit" class="btn btn-outline" style="width: 100%; border-color: rgba(255,255,255,0.3); color: white;">Payer 6x</button>
-                            </form>
+                            <a href="#" class="btn btn-outline" style="width: 100%; border-color: rgba(255,255,255,0.3); color: white;">Payer 6x</a>
                         </div>
                     </div>
                 </div>
